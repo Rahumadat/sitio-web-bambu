@@ -1,0 +1,25 @@
+/* ==========================================================================
+   TEMA A — "Bambú & Dorado"  (verde bambú claro + acentos dorados)
+   Tipografía: Baloo 2 (títulos) · Nunito (texto)  ← la que te gustó
+   ========================================================================== */
+:root {
+  --primario:       #8BC34A;  /* verde bambú claro */
+  --primario-osc:   #5f9e2f;  /* verde hoja más profundo */
+  --primario-claro: #EDF6E1;  /* verde muy suave de fondo */
+  --secundario:     #C9A227;  /* dorado / mostaza cálido */
+  --secundario-osc: #A67C1A;  /* dorado profundo */
+  --secundario-cl:  #FBF3DA;  /* crema dorada suave */
+  --acento:         #E0B84C;  /* dorado brillante para detalles */
+  --texto:          #3B4A2F;  /* verde grisáceo oscuro para lectura */
+  --texto-suave:    #6B7A5A;  /* verde apagado para descripciones */
+  --gris-fondo:     #F7FBEF;  /* fondo alterno verde crema */
+  --extranjeros-a:  #8BC34A;  /* degradado sección extranjeros: verde... */
+  --extranjeros-b:  #5f9e2f;  /* ...a verde hoja */
+
+  --font-titulos: 'Baloo 2', 'Nunito', sans-serif;
+  --font-texto:   'Nunito', system-ui, sans-serif;
+
+  --sombra:       0 10px 30px rgba(95, 158, 47, 0.14);
+  --sombra-hover: 0 16px 40px rgba(95, 158, 47, 0.22);
+}
+body { background: #FEFFFB; }

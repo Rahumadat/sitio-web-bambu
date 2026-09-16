@@ -1,0 +1,24 @@
+/* ==========================================================================
+   TEMA B — "Cielo & Girasol"  (alegre y luminosa)
+   Títulos: Fredoka · Texto: Poppins
+   ========================================================================== */
+:root {
+  --primario:       #5BAEDC;  /* azul cielo */
+  --primario-osc:   #3E8FBE;
+  --primario-claro: #E4F2FB;
+  --secundario:     #8FCB6E;  /* verde hierba suave */
+  --secundario-osc: #6BAD4A;
+  --secundario-cl:  #EEF7E7;
+  --acento:         #FCC419;  /* amarillo girasol */
+  --texto:          #37474F;  /* azul pizarra */
+  --texto-suave:    #5D6E77;
+  --gris-fondo:     #FBFDFF;  /* blanco hueso */
+  --extranjeros-a:  #5BAEDC;
+  --extranjeros-b:  #3E8FBE;
+
+  --font-titulos: 'Fredoka', 'Nunito', sans-serif;
+  --font-texto:   'Poppins', system-ui, sans-serif;
+
+  --sombra:       0 10px 30px rgba(62, 143, 190, 0.14);
+  --sombra-hover: 0 16px 40px rgba(62, 143, 190, 0.22);
+}

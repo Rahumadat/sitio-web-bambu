@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Escuela de Lenguaje Bambú — Educación inicial especializada en el desarrollo del lenguaje. 15 años de trayectoria desde 2009. Apoyo fonoaudiológico 100% gratuito. Lampa, Región Metropolitana." />
+  <title>Escuela de Lenguaje Bambú | Educación inicial y desarrollo del lenguaje</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts: cargamos todas las familias usadas por los temas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Comfortaa:wght@500;600;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS base (estructura del sitio) -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- ============================================================
+       TEMA ACTIVO — cambia SOLO esta línea para probar cada paleta:
+         css/theme-a.css  →  Durazno & Menta   (cálida y suave)
+         css/theme-b.css  →  Cielo & Girasol   (alegre y luminosa)
+         css/theme-c.css  →  Lavanda & Salvia  (calmada y moderna)
+       ============================================================ -->
+  <link rel="stylesheet" href="css/theme-a.css" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-bambu" aria-label="Menú principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <img class="brand-leaf" src="assets/rama-hoja-bambu.jpg" alt="Rama de bambú" width="34" height="34" />
+        <span class="brand-text">Bambú</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuBambu"
+        aria-controls="menuBambu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuBambu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#niveles">Niveles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#admision">Admisión</a></li>
+          <li class="nav-item"><a class="nav-link" href="#extranjeros">Extranjeros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#redes">Redes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-whatsapp" href="https://wa.me/56443193236" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO / INICIO ===================== -->
+  <header id="inicio" class="hero">
+    <img src="assets/bambues.png" alt="" class="bamboo-deco bamboo-deco-tl" aria-hidden="true" />
+    <img src="assets/bambues.png" alt="" class="bamboo-deco bamboo-deco-br" aria-hidden="true" />
+    <img src="assets/panda_asomado.jpeg" alt="" class="panda-deco panda-hero" aria-hidden="true" />
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 text-center text-lg-start">
+          <span class="badge-trayectoria mb-3">
+            <i class="bi bi-award-fill" aria-hidden="true"></i> 15 años de trayectoria · Desde 2009
+          </span>
+          <h1 class="hero-title">
+            <span class="hero-eyebrow">Escuela de Lenguaje</span>
+            <span class="hero-brand">Bambú</span>
+            <span class="hero-brand-line">Creciendo juntos, palabra a palabra</span>
+          </h1>
+          <p class="hero-subtitle">
+            Educación inicial especializada en el desarrollo del lenguaje. Un espacio cálido y confiable donde cada
+            niño y niña aprende, se expresa y avanza con apoyo pedagógico y fonoaudiológico profesional.
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+            <a href="#admision" class="btn btn-bambu-primary btn-lg">
+              <i class="bi bi-mortarboard-fill" aria-hidden="true"></i> Quiero postular
+            </a>
+            <a href="#nosotros" class="btn btn-bambu-outline btn-lg">Conócenos</a>
+          </div>
+        </div>
+        <div class="col-lg-7 text-center">
+          <div class="hero-media">
+            <img src="assets/equipo-bambu.jpg" alt="Equipo de educadoras de la Escuela de Lenguaje Bambú junto al estandarte institucional" class="hero-img" />
+            <div class="hero-float hero-float-1"><i class="bi bi-chat-heart-fill"></i></div>
+            <div class="hero-float hero-float-2"><i class="bi bi-book-half"></i></div>
+            <div class="hero-float hero-float-3"><i class="bi bi-emoji-smile-fill"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none"><path d="M0,64L80,58.7C160,53,320,43,480,48C640,53,800,75,960,74.7C1120,75,1280,53,1360,42.7L1440,32L1440,100L0,100Z"></path></svg>
+    </div>
+  </header>
+
+  <!-- ===================== SOBRE NOSOTROS ===================== -->
+  <section id="nosotros" class="section has-panda">
+    <img src="assets/panda_de_costado.jpeg" alt="" class="panda-deco panda-nosotros" aria-hidden="true" />
+    <div class="container">
+      <div class="text-center section-head">
+        <span class="section-eyebrow">Sobre nosotros</span>
+        <h2 class="section-title">Una escuela nacida de la vocación</h2>
+      </div>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="assets/Frontis-bambu.jpg" alt="Frontis de la Escuela de Lenguaje Bambú" class="img-fluid rounded-media mb-4" />
+          <p class="lead-text">
+            La <strong>Escuela de Lenguaje Bambú</strong> fue fundada por <strong>tres educadoras diferenciales
+            especialistas</strong>, unidas por la convicción de que cada niño y niña merece herramientas para
+            comunicarse y desarrollarse plenamente.
+          </p>
+          <p>
+            Ofrecemos una <strong>atención pedagógica especializada</strong>, con planes de trabajo diseñados
+            según las necesidades de cada estudiante y un ambiente afectuoso que acompaña sus primeros pasos en
+            el aprendizaje.
+          </p>
+          <div class="highlight-card">
+            <i class="bi bi-heart-pulse-fill" aria-hidden="true"></i>
+            <div>
+              <h3 class="h5 mb-1">Apoyo fonoaudiológico 100% gratuito</h3>
+              <p class="mb-0">Gracias al financiamiento del <strong>Mineduc</strong>, todas nuestras familias
+                acceden a apoyo fonoaudiológico profesional sin costo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-6">
+              <div class="value-card">
+                <i class="bi bi-people-fill" aria-hidden="true"></i>
+                <h3 class="h6">3 Educadoras Especialistas</h3>
+                <p>Fundadoras con formación diferencial.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="value-card">
+                <i class="bi bi-clipboard2-pulse-fill" aria-hidden="true"></i>
+                <h3 class="h6">Atención Personalizada</h3>
+                <p>Planes según cada estudiante.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="value-card">
+                <i class="bi bi-chat-square-heart-fill" aria-hidden="true"></i>
+                <h3 class="h6">Enfoque en el Lenguaje</h3>
+                <p>Estimulación integral del habla.</p>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="value-card">
+                <i class="bi bi-house-heart-fill" aria-hidden="true"></i>
+                <h3 class="h6">Ambiente Cálido</h3>
+                <p>Un espacio seguro y afectuoso.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== JORNADAS Y NIVELES ===================== -->
+  <section id="niveles" class="section section-alt">
+    <div class="container">
+      <div class="text-center section-head">
+        <span class="section-eyebrow">Jornadas y niveles</span>
+        <h2 class="section-title">Nuestros horarios y cursos</h2>
+      </div>
+
+      <!-- Jornadas -->
+      <div class="row g-4 justify-content-center mb-5">
+        <div class="col-md-5">
+          <div class="jornada-card">
+            <i class="bi bi-sunrise-fill" aria-hidden="true"></i>
+            <h3 class="h5 mb-1">Jornada Mañana</h3>
+            <p class="jornada-horario mb-0">09:00 a 13:00 hrs.</p>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="jornada-card">
+            <i class="bi bi-sun-fill" aria-hidden="true"></i>
+            <h3 class="h5 mb-1">Jornada Tarde</h3>
+            <p class="jornada-horario mb-0">14:00 a 17:00 hrs.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Niveles -->
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="nivel-card">
+            <img src="https://picsum.photos/seed/bambu-medio/420/260" alt="Nivel Medio Mayor" class="nivel-img" />
+            <span class="nivel-edad">3 años</span>
+            <h3 class="h4">Medio Mayor</h3>
+            <p>Primeros pasos en la socialización y estimulación temprana del lenguaje.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="nivel-card nivel-destacado">
+            <img src="https://picsum.photos/seed/bambu-prekinder/420/260" alt="Nivel Pre-Kínder" class="nivel-img" />
+            <span class="nivel-edad">4 años</span>
+            <h3 class="h4">Pre-Kínder</h3>
+            <p>Desarrollo del vocabulario, la expresión y el juego colaborativo.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="nivel-card">
+            <img src="https://picsum.photos/seed/bambu-kinder/420/260" alt="Nivel Kínder" class="nivel-img" />
+            <span class="nivel-edad">5 años</span>
+            <h3 class="h4">Kínder</h3>
+            <p>Preparación integral para el ingreso a la educación básica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESO DE ADMISIÓN ===================== -->
+  <section id="admision" class="section has-panda">
+    <img src="assets/panda_recostado.jpeg" alt="" class="panda-deco panda-admision" aria-hidden="true" />
+    <div class="container">
+      <div class="text-center section-head">
+        <span class="section-eyebrow">Proceso de admisión</span>
+        <h2 class="section-title">Postula en 3 simples pasos</h2>
+        <p class="section-lead mx-auto">Te acompañamos durante todo el proceso de matrícula de forma clara y cercana.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="step-card">
+            <span class="step-number">1</span>
+            <i class="bi bi-calendar2-check-fill" aria-hidden="true"></i>
+            <h3 class="h5">Agenda tu evaluación</h3>
+            <p>Solicita la <strong>Evaluación Fonoaudiológica Gratuita</strong> para el diagnóstico de TEL
+              (Trastorno Específico del Lenguaje).</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <span class="step-number">2</span>
+            <i class="bi bi-file-earmark-medical-fill" aria-hidden="true"></i>
+            <h3 class="h5">Presenta tus documentos</h3>
+            <p>Entrega el <strong>Certificado de Nacimiento</strong> y el <strong>Informe Fonoaudiológico</strong>
+              anterior (si lo posee).</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <span class="step-number">3</span>
+            <i class="bi bi-house-check-fill" aria-hidden="true"></i>
+            <h3 class="h5">Formaliza la matrícula</h3>
+            <p>Realiza la <strong>acreditación de residencia</strong> y la formalización final de la matrícula.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/56443193236?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20fonoaudiol%C3%B3gica%20gratuita"
+          target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i> Agendar evaluación gratuita
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ADMISIÓN EXTRANJEROS ===================== -->
+  <section id="extranjeros" class="section section-extranjeros">
+    <div class="container">
+      <div class="extranjeros-block">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="section-eyebrow section-eyebrow-light">Admisión para extranjeros</span>
+            <h2 class="section-title text-white">Bienvenidas todas las familias</h2>
+            <p class="text-white-90">
+              Sabemos que llegar a un nuevo país trae dudas. En Bambú te acompañamos paso a paso para que tu hijo o
+              hija se incorpore al sistema escolar chileno de forma clara y acogedora.
+            </p>
+            <ul class="extranjeros-list">
+              <li>
+                <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                <span><strong>Regularización:</strong> te orientamos sobre los requisitos de residencia y la
+                  documentación necesaria.</span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                <span><strong>Identificador Provisorio Escolar (IPE):</strong> si aún no cuentas con RUN, gestionamos
+                  el IPE para permitir la matrícula.</span>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
+                <span><strong>Validación de documentos:</strong> revisamos y validamos tus certificados para facilitar
+                  la incorporación al sistema escolar chileno.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-5 text-center">
+            <img src="https://picsum.photos/seed/bambu-extranjeros/460/340" alt="Familias de distintos países bienvenidas" class="extranjeros-img mb-2" />
+            <a class="btn btn-light btn-lg mt-3" href="https://wa.me/56443193236?text=Hola%2C%20soy%20una%20familia%20extranjera%20y%20quiero%20informaci%C3%B3n%20sobre%20la%20matr%C3%ADcula"
+              target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp" aria-hidden="true"></i> Consultar por matrícula
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section id="contacto" class="section section-alt">
+    <div class="container">
+      <div class="text-center section-head">
+        <span class="section-eyebrow">Contacto</span>
+        <h2 class="section-title">Estamos para ayudarte</h2>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-5">
+          <div class="contacto-info">
+            <a class="contacto-item" href="https://maps.google.com/?q=Calle+Chag%C3%BCal+719+Larapinta+Lampa" target="_blank" rel="noopener">
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              <div>
+                <h3 class="h6 mb-0">Dirección</h3>
+                <p class="mb-0">Calle Chagüal 719, Sector Larapinta,<br>Comuna de Lampa, Región Metropolitana</p>
+              </div>
+            </a>
+            <a class="contacto-item" href="mailto:escuelabambu@gmail.com">
+              <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+              <div>
+                <h3 class="h6 mb-0">Correo</h3>
+                <p class="mb-0">escuelabambu@gmail.com</p>
+              </div>
+            </a>
+            <a class="contacto-item" href="tel:+56443193236">
+              <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+              <div>
+                <h3 class="h6 mb-0">Teléfono</h3>
+                <p class="mb-0">+56 44 319 3236</p>
+              </div>
+            </a>
+            <a class="contacto-item contacto-item-wa" href="https://wa.me/56443193236" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              <div>
+                <h3 class="h6 mb-0">WhatsApp</h3>
+                <p class="mb-0">Escríbenos directo · +56 44 319 3236</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="mapa-wrapper">
+            <!-- Mapa interactivo (placeholder) — Sector Larapinta, Lampa -->
+            <iframe
+              title="Ubicación Escuela de Lenguaje Bambú en Larapinta, Lampa"
+              src="https://www.google.com/maps?q=Larapinta,+Lampa,+Regi%C3%B3n+Metropolitana&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BANNER REDES SOCIALES ===================== -->
+  <section id="redes" class="section-redes">
+    <img src="assets/bambues.png" alt="" class="bamboo-deco bamboo-deco-redes" aria-hidden="true" />
+    <img src="assets/panda_acostado.jpeg" alt="" class="panda-deco panda-redes" aria-hidden="true" />
+    <div class="container text-center">
+      <div class="section-head">
+        <span class="section-eyebrow">Síguenos en redes</span>
+        <h2 class="section-title">Vive el día a día de Bambú</h2>
+        <p class="section-lead mx-auto">Fotos de nuestras actividades, celebraciones y aprendizajes. Síguenos en
+          Facebook e Instagram.</p>
+      </div>
+    </div>
+
+    <!-- Galería de desplazamiento automático continuo (marquee infinito) -->
+    <div class="redes-marquee" aria-label="Galería de publicaciones en redes sociales">
+      <div class="redes-track">
+        <!-- Grupo de fotos (se duplica más abajo para el loop continuo) -->
+        <a class="redes-item" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+          <img src="https://picsum.photos/seed/bambu-red1/400/400" alt="Publicación de la escuela en redes" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-instagram"></i></span>
+        </a>
+        <a class="redes-item" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Ver en Facebook">
+          <img src="https://picsum.photos/seed/bambu-red2/400/400" alt="Publicación de la escuela en redes" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-facebook"></i></span>
+        </a>
+        <a class="redes-item" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+          <img src="https://picsum.photos/seed/bambu-red3/400/400" alt="Publicación de la escuela en redes" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-instagram"></i></span>
+        </a>
+        <a class="redes-item" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Ver en Facebook">
+          <img src="https://picsum.photos/seed/bambu-red4/400/400" alt="Publicación de la escuela en redes" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-facebook"></i></span>
+        </a>
+        <a class="redes-item" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+          <img src="https://picsum.photos/seed/bambu-red5/400/400" alt="Publicación de la escuela en redes" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-instagram"></i></span>
+        </a>
+        <a class="redes-item" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Ver en Facebook">
+          <img src="https://picsum.photos/seed/bambu-red6/400/400" alt="Publicación de la escuela en redes" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-facebook"></i></span>
+        </a>
+        <a class="redes-item" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Ver en Instagram">
+          <img src="https://picsum.photos/seed/bambu-red7/400/400" alt="Publicación de la escuela en redes" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-instagram"></i></span>
+        </a>
+        <a class="redes-item" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Ver en Facebook">
+          <img src="https://picsum.photos/seed/bambu-red8/400/400" alt="Publicación de la escuela en redes" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-facebook"></i></span>
+        </a>
+
+        <!-- Copia idéntica del grupo (aria-hidden) para lograr el loop sin cortes -->
+        <a class="redes-item" href="https://www.instagram.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <img src="https://picsum.photos/seed/bambu-red1/400/400" alt="" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-instagram"></i></span>
+        </a>
+        <a class="redes-item" href="https://facebook.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <img src="https://picsum.photos/seed/bambu-red2/400/400" alt="" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-facebook"></i></span>
+        </a>
+        <a class="redes-item" href="https://www.instagram.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <img src="https://picsum.photos/seed/bambu-red3/400/400" alt="" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-instagram"></i></span>
+        </a>
+        <a class="redes-item" href="https://facebook.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <img src="https://picsum.photos/seed/bambu-red4/400/400" alt="" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-facebook"></i></span>
+        </a>
+        <a class="redes-item" href="https://www.instagram.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <img src="https://picsum.photos/seed/bambu-red5/400/400" alt="" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-instagram"></i></span>
+        </a>
+        <a class="redes-item" href="https://facebook.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <img src="https://picsum.photos/seed/bambu-red6/400/400" alt="" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-facebook"></i></span>
+        </a>
+        <a class="redes-item" href="https://www.instagram.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <img src="https://picsum.photos/seed/bambu-red7/400/400" alt="" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-instagram"></i></span>
+        </a>
+        <a class="redes-item" href="https://facebook.com" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <img src="https://picsum.photos/seed/bambu-red8/400/400" alt="" loading="lazy" />
+          <span class="redes-overlay"><i class="bi bi-facebook"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="container text-center mt-4">
+      <a href="https://www.instagram.com" target="_blank" rel="noopener" class="btn btn-bambu-outline me-2">
+        <i class="bi bi-instagram" aria-hidden="true"></i> Instagram
+      </a>
+      <a href="https://facebook.com" target="_blank" rel="noopener" class="btn btn-bambu-outline">
+        <i class="bi bi-facebook" aria-hidden="true"></i> Facebook
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-md-4 text-center text-md-start">
+          <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-2" href="#inicio">
+            <img class="brand-leaf" src="assets/rama-hoja-bambu.jpg" alt="Rama de bambú" width="34" height="34" />
+            <span class="brand-text">Bambú</span>
+          </a>
+          <p class="footer-tagline mb-0">Escuela de Lenguaje · 15 años de trayectoria desde 2009.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <p class="mb-2 footer-address">Calle Chagüal 719, Larapinta, Lampa, R.M.</p>
+          <div class="footer-social">
+            <a href="https://facebook.com" target="_blank" class="text-white me-3" aria-label="Facebook de la Escuela"> <i class="bi bi-facebook fs-4"></i> </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <a class="footer-link d-block" href="mailto:escuelabambu@gmail.com">escuelabambu@gmail.com</a>
+          <a class="footer-link d-block" href="tel:+56443193236">+56 44 319 3236</a>
+        </div>
+      </div>
+      <hr class="footer-divider" />
+      <p class="text-center footer-copy mb-0">© 2026 Escuela de Lenguaje Bambú. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== BOTÓN FLOTANTE WHATSAPP ===================== -->
+  <a class="wa-float" href="https://wa.me/56443193236" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    // Cierra el menú colapsable al hacer clic en un enlace (móvil)
+    document.querySelectorAll('#menuBambu .nav-link, #menuBambu .btn').forEach(function (link) {
+      link.addEventListener('click', function () {
+        var toggler = document.querySelector('.navbar-toggler');
+        var menu = document.getElementById('menuBambu');
+        if (menu.classList.contains('show') && window.getComputedStyle(toggler).display !== 'none') {
+          toggler.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

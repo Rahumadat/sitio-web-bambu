@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Archivos temporales / comprimidos
+*.zip
+*.tmp
+
+# Carpeta de recortes/temporales del navegador
+pandas.jpg_files/
+
+# Editores
+.vscode/
+.idea/

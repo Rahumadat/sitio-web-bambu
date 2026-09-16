@@ -1,0 +1,24 @@
+/* ==========================================================================
+   TEMA C — "Lavanda & Salvia"  (calmada y moderna)
+   Títulos: Comfortaa · Texto: Quicksand
+   ========================================================================== */
+:root {
+  --primario:       #9B8FD4;  /* lavanda */
+  --primario-osc:   #7A6DBE;
+  --primario-claro: #EEEBF8;
+  --secundario:     #8FBFA3;  /* verde salvia */
+  --secundario-osc: #6BA080;
+  --secundario-cl:  #EAF4EE;
+  --acento:         #F2A6B3;  /* rosa polvo */
+  --texto:          #4A4453;  /* gris ciruela */
+  --texto-suave:    #726C7D;
+  --gris-fondo:     #FBF9FF;  /* lila muy claro */
+  --extranjeros-a:  #9B8FD4;
+  --extranjeros-b:  #7A6DBE;
+
+  --font-titulos: 'Comfortaa', 'Quicksand', sans-serif;
+  --font-texto:   'Quicksand', system-ui, sans-serif;
+
+  --sombra:       0 10px 30px rgba(122, 109, 190, 0.14);
+  --sombra-hover: 0 16px 40px rgba(122, 109, 190, 0.22);
+}
