@@ -75,6 +75,13 @@ section[id], header[id] { scroll-margin-top: 80px; }
   transition: transform .3s ease;
 }
 .navbar-brand:hover .brand-leaf { transform: scale(1.08); }
+.brand-logo {
+  display: block;
+  height: 52px;
+  width: auto;
+  transition: transform .3s ease;
+}
+.navbar-brand:hover .brand-logo { transform: scale(1.04); }
 .brand-text {
   font-size: 1.5rem; font-weight: 700;
   color: var(--primario-osc); letter-spacing: .5px;
