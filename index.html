@@ -17,7 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Comfortaa:wght@500;600;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <!-- CSS base (estructura del sitio) -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=2" />
 
   <!-- ============================================================
        TEMA ACTIVO — cambia SOLO esta línea para probar cada paleta:
@@ -25,7 +25,7 @@
          css/theme-b.css  →  Cielo & Girasol   (alegre y luminosa)
          css/theme-c.css  →  Lavanda & Salvia  (calmada y moderna)
        ============================================================ -->
-  <link rel="stylesheet" href="css/theme-a.css" />
+  <link rel="stylesheet" href="css/theme-a.css?v=2" />
 </head>
 
 <body>
@@ -209,21 +209,16 @@
       </div>
 
       <!-- Jornadas -->
-      <div class="row g-4 justify-content-center mb-5">
-        <div class="col-md-5">
-          <div class="jornada-card">
-            <i class="bi bi-sunrise-fill" aria-hidden="true"></i>
-            <h3 class="h5 mb-1">Jornada Mañana</h3>
-            <p class="jornada-horario mb-0">09:00 a 13:00 hrs.</p>
-          </div>
+      <div class="jornadas-wrap mb-5">
+        <div class="jornada-card jornada-manana">
+          <i class="bi bi-sunrise-fill" aria-hidden="true"></i>
+          <h3 class="h5 mb-0">Jornada Mañana</h3>
         </div>
-        <div class="col-md-5">
-          <div class="jornada-card">
-            <i class="bi bi-sun-fill" aria-hidden="true"></i>
-            <h3 class="h5 mb-1">Jornada Tarde</h3>
-            <p class="jornada-horario mb-0">14:00 a 17:00 hrs.</p>
-          </div>
+        <div class="jornada-card jornada-tarde">
+          <i class="bi bi-sun-fill" aria-hidden="true"></i>
+          <h3 class="h5 mb-0">Jornada Tarde</h3>
         </div>
+        <img src="assets/panda_manana_tarde.jpeg" alt="Panda de jornada mañana y tarde" class="jornadas-panda" />
       </div>
 
       <!-- Niveles -->

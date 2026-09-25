@@ -249,10 +249,10 @@ section[id], header[id] { scroll-margin-top: 80px; }
 /* -------------------- Sobre Nosotros -------------------- */
 .highlight-card {
   display: flex; gap: 1rem; align-items: flex-start;
-  background: var(--secundario-cl); border-left: 5px solid var(--secundario);
+  background: var(--primario-claro); border-left: 5px solid var(--primario);
   border-radius: var(--radio); padding: 1.4rem 1.5rem; margin-top: 1.8rem;
 }
-.highlight-card > .bi { font-size: 2rem; color: var(--secundario-osc); flex-shrink: 0; }
+.highlight-card > .bi { font-size: 2rem; color: var(--primario-osc); flex-shrink: 0; }
 .value-card {
   background: #fff; border: 1px solid #eef3f0; border-radius: var(--radio);
   padding: 1.6rem 1.2rem; height: 100%; text-align: center; box-shadow: var(--sombra);
@@ -268,12 +268,61 @@ section[id], header[id] { scroll-margin-top: 80px; }
 .value-card p { color: var(--texto-suave); font-size: .95rem; margin: 0; text-align: justify; }
 
 /* -------------------- Jornadas -------------------- */
-.jornada-card {
-  background: #fff; border-radius: var(--radio); padding: 1.8rem; text-align: center;
-  box-shadow: var(--sombra); border-top: 5px solid var(--secundario);
+.jornadas-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.jornada-card > .bi { font-size: 2.6rem; color: var(--secundario); margin-bottom: .5rem; }
-.jornada-horario { font-size: 1.3rem; font-weight: 700; color: var(--primario-osc); }
+.jornada-card {
+  flex: 1 1 0;
+  padding: 2.2rem 1.8rem;
+  text-align: center;
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  color: #fff;
+}
+.jornada-card > .bi { font-size: 2.6rem; margin-bottom: .2rem; }
+.jornada-card h3 { color: #fff; }
+
+/* Mañana: amarillo · esquinas redondeadas a la izquierda */
+.jornada-manana {
+  background: #F6B400;
+  border-radius: var(--radio) 0 0 var(--radio);
+}
+/* Tarde: azul · esquinas redondeadas a la derecha */
+.jornada-tarde {
+  background: #2F80C4;
+  border-radius: 0 var(--radio) var(--radio) 0;
+}
+
+/* Panda sobrepuesto al centro, entre ambas tarjetas */
+.jornadas-panda {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(90px, 16vw, 140px);
+  height: auto;
+  z-index: 3;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 575.98px) {
+  .jornadas-wrap { flex-direction: column; }
+  .jornada-manana { border-radius: var(--radio) var(--radio) 0 0; }
+  .jornada-tarde { border-radius: 0 0 var(--radio) var(--radio); }
+  .jornadas-panda { width: 90px; }
+}
 
 /* -------------------- Niveles -------------------- */
 .nivel-card {
