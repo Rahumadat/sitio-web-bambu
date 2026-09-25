@@ -332,7 +332,15 @@ section[id], header[id] { scroll-margin-top: 80px; }
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .nivel-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-hover); border-color: var(--primario); }
-.nivel-img { width: 100%; height: 180px; object-fit: cover; display: block; margin-bottom: 1.4rem; }
+.nivel-img {
+  display: block;
+  width: auto;
+  max-width: 60%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  margin: 1.4rem auto;
+}
 .nivel-destacado { border-color: var(--primario); }
 .nivel-destacado .nivel-edad { background: var(--primario); }
 .nivel-edad {
