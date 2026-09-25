@@ -260,7 +260,12 @@ section[id], header[id] { scroll-margin-top: 80px; }
 }
 .value-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-hover); }
 .value-card > .bi { font-size: 2.2rem; color: var(--primario); margin-bottom: .6rem; }
-.value-card p { color: var(--texto-suave); font-size: .95rem; margin: 0; }
+.value-card-img {
+  width: 57px; height: 57px;
+  object-fit: contain;
+  margin-bottom: .6rem;
+}
+.value-card p { color: var(--texto-suave); font-size: .95rem; margin: 0; text-align: justify; }
 
 /* -------------------- Jornadas -------------------- */
 .jornada-card {
