@@ -463,3 +463,35 @@ section[id], header[id] { scroll-margin-top: 80px; }
   }
 }
 
+
+/* -------------------- Misión y Visión -------------------- */
+.mv-card {
+  background: #fff;
+  border-radius: var(--radio);
+  padding: 2.4rem 2rem;
+  height: 100%;
+  box-shadow: var(--sombra);
+  border-top: 5px solid var(--primario);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.mv-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-hover); }
+.mv-vision { border-top-color: var(--secundario); }
+.mv-icon-img {
+  display: block;
+  width: 56px; height: 56px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+.mv-title {
+  font-size: 1.6rem;
+  color: var(--texto);
+  margin-bottom: .8rem;
+  text-align: center;
+}
+.mv-card p {
+  color: var(--texto-suave);
+  font-size: 1.02rem;
+  text-align: justify;
+  margin: 0;
+}
