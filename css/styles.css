@@ -715,3 +715,13 @@ section[id], header[id] { scroll-margin-top: 70px; }
   color: var(--primario-osc);
   flex-shrink: 0;
 }
+/* Colores por nivel para las listas de útiles (coinciden con Niveles) */
+.doc-verde    { border-top: 4px solid var(--primario); }
+.doc-amarillo { border-top: 4px solid #F6B400; }
+.doc-azul     { border-top: 4px solid #2F80C4; }
+.doc-verde    .doc-icon, .doc-verde    .doc-dl { color: var(--primario); }
+.doc-amarillo .doc-icon, .doc-amarillo .doc-dl { color: #D69400; }
+.doc-azul     .doc-icon, .doc-azul     .doc-dl { color: #2F80C4; }
+.doc-verde:hover    { border-color: var(--primario); }
+.doc-amarillo:hover { border-color: #F6B400; }
+.doc-azul:hover     { border-color: #2F80C4; }
