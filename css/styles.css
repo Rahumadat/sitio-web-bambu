@@ -138,21 +138,31 @@ section[id], header[id] { scroll-margin-top: 80px; }
   z-index: 1;
   pointer-events: none;
   user-select: none;
-  opacity: .9;
+  opacity: .4;
   width: clamp(160px, 22vw, 300px);
   height: auto;
 }
 .bamboo-deco-tl {
-  top: 0; right: 0;
-  transform: scaleX(-1) rotate(8deg) translate(-8%, -14%);
+  bottom: 20px; right: -8%;
+  width: clamp(220px, 30vw, 420px);
+  transform: scaleX(-1) rotate(6deg);
 }
 .bamboo-deco-br {
   bottom: 40px; right: 0;
   transform: scaleX(-1) rotate(6deg) translate(-8%, 6%);
 }
+/* Réplica de la rama en el lado izquierdo: tenue (30%), detrás del contenido y asomada a la mitad */
+.bamboo-deco-left {
+  bottom: 0;
+  left: -8%;
+  width: clamp(220px, 30vw, 420px);
+  opacity: .3;
+  z-index: 0;
+  transform: rotate(6deg);
+}
 /* Oculta las ramas en pantallas medianas/pequeñas para evitar solapes con el texto */
 @media (max-width: 991.98px) {
-  .bamboo-deco-tl, .bamboo-deco-br { display: none; }
+  .bamboo-deco-tl, .bamboo-deco-br, .bamboo-deco-left { display: none; }
 }
 .badge-trayectoria {
   display: inline-block; background: #fff; color: var(--primario-osc);
@@ -328,10 +338,17 @@ section[id], header[id] { scroll-margin-top: 80px; }
 .nivel-card {
   background: #fff; border-radius: var(--radio); padding: 0 0 2rem;
   height: 100%; text-align: center; box-shadow: var(--sombra);
-  border: 2px solid transparent; overflow: hidden;
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  border-top: 5px solid var(--primario); overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
-.nivel-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-hover); border-color: var(--primario); }
+.nivel-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-hover); }
+/* Colores por nivel (como las tarjetas de Misión/Visión) */
+.nivel-verde   { border-top-color: var(--primario); }
+.nivel-amarillo{ border-top-color: #F6B400; }
+.nivel-azul    { border-top-color: #2F80C4; }
+.nivel-verde   .nivel-edad { background: var(--primario); }
+.nivel-amarillo .nivel-edad { background: #F6B400; }
+.nivel-azul    .nivel-edad { background: #2F80C4; }
 .nivel-img {
   display: block;
   width: auto;
@@ -341,8 +358,6 @@ section[id], header[id] { scroll-margin-top: 80px; }
   object-fit: contain;
   margin: 1.4rem auto;
 }
-.nivel-destacado { border-color: var(--primario); }
-.nivel-destacado .nivel-edad { background: var(--primario); }
 .nivel-edad {
   display: inline-block; background: var(--secundario); color: #fff; font-weight: 700;
   padding: .3rem 1rem; border-radius: 50px; margin-bottom: .8rem; font-size: .9rem;
@@ -533,22 +548,159 @@ section[id], header[id] { scroll-margin-top: 80px; }
 }
 .mv-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-hover); }
 .mv-vision { border-top-color: var(--secundario); }
+.mv-enfoque { border-top-color: #2F80C4; }
+.mv-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
 .mv-icon-img {
   display: block;
-  width: 56px; height: 56px;
+  width: 80px; height: 80px;
   object-fit: contain;
   border-radius: 50%;
-  margin: 0 auto 1rem;
+  flex-shrink: 0;
 }
 .mv-title {
   font-size: 1.6rem;
   color: var(--texto);
-  margin-bottom: .8rem;
-  text-align: center;
+  margin-bottom: 0;
+  text-align: left;
 }
 .mv-card p {
   color: var(--texto-suave);
   font-size: 1.02rem;
   text-align: justify;
   margin: 0;
+}
+
+/* -------------------- Admisión: gratuidad + formulario -------------------- */
+.admision-gratuidad {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: var(--primario-claro);
+  border-left: 5px solid var(--primario);
+  border-radius: var(--radio);
+  padding: 1.4rem 1.6rem;
+}
+.admision-gratuidad > .bi {
+  font-size: 2.2rem;
+  color: var(--primario-osc);
+  flex-shrink: 0;
+}
+.admision-gratuidad p { color: var(--texto-suave); }
+
+.admision-form-wrap {
+  background: #fff;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+}
+.admision-form-info {
+  background: linear-gradient(160deg, var(--primario), var(--primario-osc));
+  color: #fff;
+  padding: 2.4rem 2rem;
+}
+.admision-form-info p { color: rgba(255, 255, 255, 0.92); }
+.admision-form-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.admision-form-list li {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  margin-bottom: .7rem;
+}
+.admision-form-list .bi { color: #fff; }
+.admision-form-img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  object-fit: contain;
+  margin: 1.5rem auto 0;
+}
+
+.admision-form {
+  padding: 2.4rem 2rem;
+}
+.admision-form .form-label {
+  font-weight: 600;
+  color: var(--texto);
+  margin-bottom: .3rem;
+}
+.admision-form .form-control {
+  border-radius: 12px;
+  border: 1px solid #dce5d8;
+  padding: .7rem .9rem;
+}
+.admision-form .form-select {
+  border-radius: 12px;
+  border: 1px solid #dce5d8;
+  padding: .7rem .9rem;
+}
+.admision-form .input-group-text {
+  border-radius: 12px 0 0 12px;
+  border: 1px solid #dce5d8;
+  background: var(--primario-claro);
+  color: var(--primario-osc);
+  font-weight: 700;
+}
+.admision-form .input-group .form-control {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.admision-form .form-control:focus,
+.admision-form .form-select:focus {
+  border-color: var(--primario);
+  box-shadow: 0 0 0 .2rem rgba(139, 195, 74, 0.2);
+}
+.admision-form .btn-whatsapp { margin-top: .4rem; }
+
+/* Ramas de bambú en la sección de admisión (mismo estilo que el hero) */
+.admision-bamboo { position: relative; overflow: hidden; }
+.admision-bamboo .container { position: relative; z-index: 2; }
+
+/* -------------------- Documentos -------------------- */
+.doc-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #eef3f0;
+  border-radius: var(--radio);
+  padding: 1.2rem 1.3rem;
+  height: 100%;
+  text-decoration: none;
+  color: var(--texto);
+  box-shadow: var(--sombra);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.doc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-hover);
+  border-color: var(--primario);
+  color: var(--texto);
+}
+.doc-icon {
+  font-size: 2rem;
+  color: var(--primario);
+  flex-shrink: 0;
+}
+.doc-info { flex: 1 1 auto; }
+.doc-meta {
+  display: block;
+  font-size: .8rem;
+  color: var(--texto-suave);
+  margin-top: .15rem;
+}
+.doc-dl {
+  font-size: 1.3rem;
+  color: var(--primario-osc);
+  flex-shrink: 0;
 }

@@ -6,6 +6,10 @@
   <meta name="description" content="Escuela de Lenguaje Bambú — Educación inicial especializada en el desarrollo del lenguaje. 17 años de trayectoria desde 2009. Lampa, Región Metropolitana." />
   <title>Escuela de Lenguaje Bambú | Educación inicial y desarrollo del lenguaje</title>
 
+  <!-- Favicon (ícono de la pestaña) -->
+  <link rel="icon" type="image/jpeg" href="assets/logo_bambu.jpeg" />
+  <link rel="apple-touch-icon" href="assets/logo_bambu.jpeg" />
+
   <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
@@ -17,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Comfortaa:wght@500;600;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <!-- CSS base (estructura del sitio) -->
-  <link rel="stylesheet" href="css/styles.css?v=2" />
+  <link rel="stylesheet" href="css/styles.css?v=3" />
 
   <!-- ============================================================
        TEMA ACTIVO — cambia SOLO esta línea para probar cada paleta:
@@ -25,7 +29,7 @@
          css/theme-b.css  →  Cielo & Girasol   (alegre y luminosa)
          css/theme-c.css  →  Lavanda & Salvia  (calmada y moderna)
        ============================================================ -->
-  <link rel="stylesheet" href="css/theme-a.css?v=2" />
+  <link rel="stylesheet" href="css/theme-a.css?v=3" />
 </head>
 
 <body>
@@ -35,6 +39,7 @@
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
         <img class="brand-logo" src="assets/logo_bambu.jpeg" alt="Logo Escuela de Lenguaje Bambú" />
+        <span class="brand-text">Escuela Bambú</span>
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuBambu"
@@ -45,11 +50,13 @@
       <div class="collapse navbar-collapse" id="menuBambu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
           <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mision-vision">Identidad Institucional</a></li>
           <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="#niveles">Niveles</a></li>
           <li class="nav-item"><a class="nav-link" href="#admision">Admisión</a></li>
           <li class="nav-item"><a class="nav-link" href="#redes">Redes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#documentos">Documentos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Ubicación y Contacto</a></li>
           <li class="nav-item ms-lg-2">
             <a class="btn btn-whatsapp" href="https://wa.me/56443193236" target="_blank" rel="noopener">
               <i class="bi bi-whatsapp" aria-hidden="true"></i> WhatsApp
@@ -63,7 +70,7 @@
   <!-- ===================== HERO / INICIO ===================== -->
   <header id="inicio" class="hero">
     <img src="assets/bambues.png" alt="" class="bamboo-deco bamboo-deco-tl" aria-hidden="true" />
-    <img src="assets/bambues.png" alt="" class="bamboo-deco bamboo-deco-br" aria-hidden="true" />
+    <img src="assets/bambues.png" alt="" class="bamboo-deco bamboo-deco-left" aria-hidden="true" />
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-5 text-center text-lg-start">
@@ -104,11 +111,17 @@
   <!-- ===================== MISIÓN Y VISIÓN ===================== -->
   <section id="mision-vision" class="section section-alt">
     <div class="container">
+      <div class="text-center section-head">
+        <span class="section-eyebrow">Identidad Institucional</span>
+        <h2 class="section-title">Nuestra Misión y Visión</h2>
+      </div>
       <div class="row g-4">
         <div class="col-lg-6">
           <div class="mv-card mv-mision">
-            <img src="assets/rama-hoja-bambu.jpg" alt="" class="mv-icon-img" aria-hidden="true" />
-            <h2 class="mv-title">Misión</h2>
+            <div class="mv-head">
+              <img src="assets/panda_mision.jpeg" alt="" class="mv-icon-img" aria-hidden="true" />
+              <h2 class="mv-title">Misión</h2>
+            </div>
             <p>Brindar herramientas que permitan que nuestros niños y niñas superar sus problemas de lenguaje,
               fortalecer valores cívicos y sociales, habilidades cognitivas, basadas en aprendizajes significativos
               y reales, que permitan formar un ser integral y con una visión positiva de la vida.</p>
@@ -116,12 +129,27 @@
         </div>
         <div class="col-lg-6">
           <div class="mv-card mv-vision">
-            <img src="assets/rama-hoja-bambu.jpg" alt="" class="mv-icon-img" aria-hidden="true" />
-            <h2 class="mv-title">Visión</h2>
+            <div class="mv-head">
+              <img src="assets/panda_vision.jpeg" alt="" class="mv-icon-img" aria-hidden="true" />
+              <h2 class="mv-title">Visión</h2>
+            </div>
             <p>Entregar un modelo educativo integral, caracterizado por la superación de sus dificultades,
               aprendizajes significativos, centrada en los valores cívicos y sociales, integrando a la familia en
               el proceso educativo; para formar y promover seres conscientes en la importancia del respeto, el medio
               ambiente, líderes positivos, críticos y autónomos.</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="mv-card mv-enfoque">
+            <div class="mv-head">
+              <img src="assets/panda_pei.jpeg" alt="" class="mv-icon-img" aria-hidden="true" />
+              <h2 class="mv-title">Enfoque Educativo</h2>
+            </div>
+            <p>Nuestro enfoque educativo es participativo, lúdico y centrado en cada niño. A través de un aprendizaje
+              significativo, respetamos las diferencias individuales con actividades dinámicas grupales e individuales.
+              Contamos con un equipo interdisciplinario de docentes, asistentes y fonoaudiólogos que diseñan planes de
+              apoyo personalizados. Para nosotros, la familia es un pilar fundamental que aporta los valores y la
+              contención necesarios en este proceso.</p>
           </div>
         </div>
       </div>
@@ -205,7 +233,7 @@
     <div class="container">
       <div class="text-center section-head">
         <span class="section-eyebrow">Jornadas y niveles</span>
-        <h2 class="section-title">Nuestros horarios y cursos</h2>
+        <h2 class="section-title">Nuestros horarios y niveles</h2>
       </div>
 
       <!-- Jornadas -->
@@ -224,25 +252,25 @@
       <!-- Niveles -->
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="nivel-card">
+          <div class="nivel-card nivel-verde">
             <img src="assets/panda_medio_mayor.jpeg" alt="Nivel Medio Mayor" class="nivel-img" />
-            <span class="nivel-edad">3 años</span>
+            <span class="nivel-edad">3 años cumplidos al 31 de Marzo del año en curso</span>
             <h3 class="h4">Medio Mayor</h3>
             <p>Primeros pasos en la socialización y estimulación temprana del lenguaje.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="nivel-card nivel-destacado">
+          <div class="nivel-card nivel-amarillo">
             <img src="assets/panda_pre_kinder.jpeg" alt="Nivel Pre-Kínder" class="nivel-img" />
-            <span class="nivel-edad">4 años</span>
+            <span class="nivel-edad">4 años cumplidos al 31 de Marzo del año en curso</span>
             <h3 class="h4">Pre-Kínder</h3>
             <p>Desarrollo del vocabulario, la expresión y el juego colaborativo.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="nivel-card">
+          <div class="nivel-card nivel-azul">
             <img src="assets/panda_kinder.jpeg" alt="Nivel Kínder" class="nivel-img" />
-            <span class="nivel-edad">5 años</span>
+            <span class="nivel-edad">5 años cumplidos al 31 de Marzo del año en curso</span>
             <h3 class="h4">Kínder</h3>
             <p>Preparación integral para el ingreso a la educación básica.</p>
           </div>
@@ -252,48 +280,138 @@
   </section>
 
   <!-- ===================== PROCESO DE ADMISIÓN ===================== -->
-  <section id="admision" class="section">
+  <section id="admision" class="section admision-bamboo">
+    <img src="assets/bambues.png" alt="" class="bamboo-deco bamboo-deco-tl" aria-hidden="true" />
+    <img src="assets/bambues.png" alt="" class="bamboo-deco bamboo-deco-left" aria-hidden="true" />
     <div class="container">
       <div class="text-center section-head">
         <span class="section-eyebrow">Proceso de admisión</span>
-        <h2 class="section-title">Postula en 3 simples pasos</h2>
-        <p class="section-lead mx-auto">Te acompañamos durante todo el proceso de matrícula de forma clara y cercana.</p>
+        <h2 class="section-title">Proceso de admisión 2027</h2>
+        <p class="section-lead mx-auto">Un proceso simple y cercano. Te acompañamos durante toda la matrícula.</p>
+      </div>
+
+      <!-- Formulario de agendamiento (envía por WhatsApp) -->
+      <div class="admision-form-wrap mt-5">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-lg-5 admision-form-info">
+            <h3 class="h4 mb-3">Agenda tu evaluación gratuita</h3>
+            <p class="mb-4">Completa tus datos y te responderemos a la brevedad. Al enviar, se abrirá WhatsApp con
+              tu información lista para contactarnos.</p>
+            <ul class="admision-form-list">
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Evaluación fonoaudiológica sin costo</li>
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Diagnóstico según Decreto 170</li>
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Atención cercana y personalizada</li>
+            </ul>
+            <img src="assets/panda_familia.png" alt="Familia panda de la Escuela de Lenguaje Bambú" class="admision-form-img" />
+          </div>
+          <div class="col-lg-7">
+            <form class="admision-form" id="formAdmision" novalidate>
+              <div class="mb-3">
+                <label for="fApoderado" class="form-label">Nombre del apoderado</label>
+                <input type="text" class="form-control" id="fApoderado" required placeholder="Ej: Pedro Bambú" />
+              </div>
+              <div class="row">
+                <div class="col-sm-6 mb-3">
+                  <label for="fTelefono" class="form-label">Teléfono de contacto</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+56</span>
+                    <input type="tel" class="form-control" id="fTelefono" required placeholder="9 1234 5678" />
+                  </div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                  <label for="fEdad" class="form-label">Edad del niño(a)</label>
+                  <select class="form-select" id="fEdad" required>
+                    <option value="" selected disabled>Selecciona una opción</option>
+                    <option value="3 años (Medio Mayor)">3 años (Medio Mayor)</option>
+                    <option value="4 años (Pre-Kínder)">4 años (Pre-Kínder)</option>
+                    <option value="5 años (Kínder)">5 años (Kínder)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="fDuda" class="form-label">¿Tienes alguna duda adicional? (opcional)</label>
+                <textarea class="form-control" id="fDuda" rows="3" placeholder="Escribe tu consulta aquí"></textarea>
+              </div>
+              <button type="submit" class="btn btn-whatsapp btn-lg w-100">
+                <i class="bi bi-whatsapp" aria-hidden="true"></i> Enviar y agendar por WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DOCUMENTOS ===================== -->
+  <section id="documentos" class="section">
+    <div class="container">
+      <div class="text-center section-head">
+        <span class="section-eyebrow">Documentos</span>
+        <h2 class="section-title">Documentos institucionales</h2>
+        <p class="section-lead mx-auto">Descarga los documentos oficiales y las listas de útiles de cada nivel.</p>
       </div>
 
       <div class="row g-4">
-        <div class="col-md-4">
-          <div class="step-card">
-            <span class="step-number">1</span>
-            <i class="bi bi-calendar2-check-fill" aria-hidden="true"></i>
-            <h3 class="h5">Agenda tu evaluación</h3>
-            <p>Solicita la <strong>Evaluación Fonoaudiológica Gratuita</strong> para el diagnóstico de TEL
-              (Trastorno Específico del Lenguaje).</p>
-          </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="doc-card" href="assets/docs/lista-utiles-medio-mayor.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-backpack2-fill doc-icon" aria-hidden="true"></i>
+            <div class="doc-info">
+              <h3 class="h6 mb-0">Lista de Útiles · Medio Mayor</h3>
+              <span class="doc-meta">PDF · 3 años</span>
+            </div>
+            <i class="bi bi-download doc-dl" aria-hidden="true"></i>
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="step-card">
-            <span class="step-number">2</span>
-            <i class="bi bi-file-earmark-medical-fill" aria-hidden="true"></i>
-            <h3 class="h5">Presenta tus documentos</h3>
-            <p>Entrega el <strong>Certificado de Nacimiento</strong> y el <strong>Informe Fonoaudiológico</strong>
-              anterior (si lo posee).</p>
-          </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="doc-card" href="assets/docs/lista-utiles-prekinder.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-backpack2-fill doc-icon" aria-hidden="true"></i>
+            <div class="doc-info">
+              <h3 class="h6 mb-0">Lista de Útiles · Pre-Kínder</h3>
+              <span class="doc-meta">PDF · 4 años</span>
+            </div>
+            <i class="bi bi-download doc-dl" aria-hidden="true"></i>
+          </a>
         </div>
-        <div class="col-md-4">
-          <div class="step-card">
-            <span class="step-number">3</span>
-            <i class="bi bi-house-check-fill" aria-hidden="true"></i>
-            <h3 class="h5">Formaliza la matrícula</h3>
-            <p>Realiza la <strong>acreditación de residencia</strong> y la formalización final de la matrícula.</p>
-          </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="doc-card" href="assets/docs/lista-utiles-kinder.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-backpack2-fill doc-icon" aria-hidden="true"></i>
+            <div class="doc-info">
+              <h3 class="h6 mb-0">Lista de Útiles · Kínder</h3>
+              <span class="doc-meta">PDF · 5 años</span>
+            </div>
+            <i class="bi bi-download doc-dl" aria-hidden="true"></i>
+          </a>
         </div>
-      </div>
-
-      <div class="text-center mt-5">
-        <a class="btn btn-whatsapp btn-lg" href="https://wa.me/56443193236?text=Hola%2C%20quiero%20agendar%20una%20evaluaci%C3%B3n%20fonoaudiol%C3%B3gica%20gratuita"
-          target="_blank" rel="noopener">
-          <i class="bi bi-whatsapp" aria-hidden="true"></i> Agendar evaluación gratuita
-        </a>
+        <div class="col-md-6 col-lg-4">
+          <a class="doc-card" href="assets/docs/pei.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-journal-bookmark-fill doc-icon" aria-hidden="true"></i>
+            <div class="doc-info">
+              <h3 class="h6 mb-0">Documento PEI</h3>
+              <span class="doc-meta">PDF</span>
+            </div>
+            <i class="bi bi-download doc-dl" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="doc-card" href="assets/docs/reglamento-interno.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-shield-fill-check doc-icon" aria-hidden="true"></i>
+            <div class="doc-info">
+              <h3 class="h6 mb-0">Reglamento Interno</h3>
+              <span class="doc-meta">PDF</span>
+            </div>
+            <i class="bi bi-download doc-dl" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="doc-card" href="assets/docs/proyecto-educativo.pdf" target="_blank" rel="noopener">
+            <i class="bi bi-mortarboard-fill doc-icon" aria-hidden="true"></i>
+            <div class="doc-info">
+              <h3 class="h6 mb-0">Proyecto Educativo Institucional</h3>
+              <span class="doc-meta">PDF</span>
+            </div>
+            <i class="bi bi-download doc-dl" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -302,7 +420,7 @@
   <section id="contacto" class="section section-alt">
     <div class="container">
       <div class="text-center section-head">
-        <span class="section-eyebrow">Contacto</span>
+        <span class="section-eyebrow">Ubicación y Contacto</span>
         <h2 class="section-title">Estamos para ayudarte</h2>
       </div>
 
@@ -490,6 +608,27 @@
       var anios = new Date().getFullYear() - aniosFundacion;
       document.querySelectorAll('.anios-trayectoria').forEach(function (el) {
         el.textContent = anios;
+      });
+    })();
+
+    // Formulario de admisión: arma el mensaje y abre WhatsApp
+    (function () {
+      var form = document.getElementById('formAdmision');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        var apoderado = document.getElementById('fApoderado').value.trim();
+        var telefono = document.getElementById('fTelefono').value.trim();
+        var edad = document.getElementById('fEdad').value.trim();
+        var duda = document.getElementById('fDuda').value.trim();
+        var texto = 'Hola, quiero agendar una evaluación fonoaudiológica gratuita.\n'
+          + '👤 Apoderado: ' + apoderado + '\n'
+          + '📞 Teléfono: +56 ' + telefono + '\n'
+          + '🧒 Edad del niño(a): ' + edad;
+        if (duda) { texto += '\n💬 Consulta: ' + duda; }
+        var url = 'https://wa.me/56443193236?text=' + encodeURIComponent(texto);
+        window.open(url, '_blank', 'noopener');
       });
     })();
 
