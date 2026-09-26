@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6,
 .section-title,
 .hero-title { font-family: var(--font-titulos); font-weight: 700; }
 
-section[id], header[id] { scroll-margin-top: 80px; }
+section[id], header[id] { scroll-margin-top: 70px; }
 
 /* Imágenes utilitarias */
 .rounded-media {
