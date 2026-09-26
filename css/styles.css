@@ -135,7 +135,7 @@ section[id], header[id] { scroll-margin-top: 70px; }
 /* Ramas de bambú decorativas (asomadas en las esquinas) */
 .bamboo-deco {
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
   user-select: none;
   opacity: .4;
@@ -662,9 +662,20 @@ section[id], header[id] { scroll-margin-top: 70px; }
 }
 .admision-form .btn-whatsapp { margin-top: .4rem; }
 
-/* Ramas de bambú en la sección de admisión (mismo estilo que el hero) */
-.admision-bamboo { position: relative; overflow: hidden; }
-.admision-bamboo .container { position: relative; z-index: 2; }
+/* Ramas de bambú en cualquier sección (mismo estilo que el hero) */
+.has-bamboo { position: relative; overflow: hidden; }
+.has-bamboo .container { position: relative; z-index: 1; }
+
+/* Ramas más grandes SOLO en la sección Sobre Nosotros (abarcan toda la altura) */
+#nosotros .bamboo-deco {
+  width: clamp(280px, 34vw, 560px);
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  object-fit: contain;
+}
+#nosotros .bamboo-deco-tl { top: 0; bottom: 0; right: -6%; }
+#nosotros .bamboo-deco-left { top: 0; bottom: 0; left: -6%; }
 
 /* -------------------- Documentos -------------------- */
 .doc-card {
