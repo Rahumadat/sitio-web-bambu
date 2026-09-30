@@ -147,10 +147,6 @@ section[id], header[id] { scroll-margin-top: 70px; }
   width: clamp(220px, 30vw, 420px);
   transform: scaleX(-1) rotate(6deg);
 }
-.bamboo-deco-br {
-  bottom: 40px; right: 0;
-  transform: scaleX(-1) rotate(6deg) translate(-8%, 6%);
-}
 /* Réplica de la rama en el lado izquierdo: tenue (30%), detrás del contenido y asomada a la mitad */
 .bamboo-deco-left {
   bottom: 0;
@@ -162,7 +158,7 @@ section[id], header[id] { scroll-margin-top: 70px; }
 }
 /* Oculta las ramas en pantallas medianas/pequeñas para evitar solapes con el texto */
 @media (max-width: 991.98px) {
-  .bamboo-deco-tl, .bamboo-deco-br, .bamboo-deco-left { display: none; }
+  .bamboo-deco-tl, .bamboo-deco-left { display: none; }
 }
 .badge-trayectoria {
   display: inline-block; background: #fff; color: var(--primario-osc);
@@ -224,19 +220,6 @@ section[id], header[id] { scroll-margin-top: 70px; }
 .hero-img {
   width: 100%; border-radius: 24px;
   box-shadow: var(--sombra); object-fit: cover;
-}
-.hero-float {
-  position: absolute; display: grid; place-items: center;
-  width: 62px; height: 62px; border-radius: 18px; background: #fff;
-  box-shadow: var(--sombra); font-size: 1.6rem;
-  animation: floaty 4s ease-in-out infinite;
-}
-.hero-float-1 { top: 6%;    left: -18px; color: var(--secundario); }
-.hero-float-2 { bottom: 12%; left: -18px; color: var(--primario-osc); animation-delay: .8s; }
-.hero-float-3 { top: 16%;   right: -18px; color: var(--acento); animation-delay: 1.6s; }
-@keyframes floaty {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-12px); }
 }
 .hero-wave { position: absolute; bottom: -1px; left: 0; width: 100%; line-height: 0; }
 .hero-wave svg { width: 100%; height: 70px; }
@@ -365,22 +348,6 @@ section[id], header[id] { scroll-margin-top: 70px; }
 .nivel-card h3, .nivel-card p { padding-left: 1.4rem; padding-right: 1.4rem; }
 .nivel-card p { color: var(--texto-suave); margin: 0; }
 
-/* -------------------- Admisión pasos -------------------- */
-.step-card {
-  position: relative; background: #fff; border-radius: var(--radio);
-  padding: 2.6rem 1.6rem 1.8rem; height: 100%; text-align: center;
-  box-shadow: var(--sombra); transition: transform .25s ease, box-shadow .25s ease;
-}
-.step-card:hover { transform: translateY(-6px); box-shadow: var(--sombra-hover); }
-.step-number {
-  position: absolute; top: -22px; left: 50%; transform: translateX(-50%);
-  display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--primario), var(--secundario));
-  color: #fff; font-weight: 700; font-size: 1.2rem; box-shadow: var(--sombra);
-}
-.step-card > .bi { font-size: 2.4rem; color: var(--primario); margin-bottom: .6rem; }
-.step-card p { color: var(--texto-suave); margin: 0; }
-
 /* -------------------- Contacto -------------------- */
 .contacto-info { display: flex; flex-direction: column; gap: 1rem; height: 100%; }
 .contacto-item {
@@ -414,22 +381,14 @@ section[id], header[id] { scroll-margin-top: 70px; }
 .footer-divider { border-color: rgba(255, 255, 255, 0.12); margin: 2rem 0 1.2rem; }
 .footer-copy { color: #90a4ae; font-size: .9rem; }
 
-/* -------------------- Botón flotante WhatsApp -------------------- */
-.wa-float {
-  position: fixed; right: 22px; bottom: 22px; z-index: 1050;
-  display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%;
-  background: var(--whatsapp); color: #fff; font-size: 1.8rem;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
-  transition: transform .2s ease, background .2s ease; animation: wa-pulse 2.5s infinite;
-}
-.wa-float:hover { background: var(--whatsapp-dk); color: #fff; transform: scale(1.08); }
-@keyframes wa-pulse {
-  0%   { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.5); }
-  70%  { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 0 0 16px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
 /* -------------------- Responsivo -------------------- */
+/* Tablet / laptop angosto: compacta el menú para que no se apriete (992–1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-bambu .nav-link { padding: .5rem .55rem; font-size: .92rem; }
+  .navbar-bambu .navbar-nav { gap: 0 !important; }
+  .brand-text { font-size: 1.25rem; }
+  .btn-whatsapp { padding: .5rem 1rem; }
+}
 @media (max-width: 991.98px) {
   .navbar-bambu .navbar-nav { padding-top: .8rem; gap: .2rem; }
   .navbar-bambu .btn-whatsapp { display: inline-block; margin-top: .5rem; }
@@ -442,7 +401,6 @@ section[id], header[id] { scroll-margin-top: 70px; }
   .footer { text-align: center; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hero-float, .wa-float { animation: none; }
   * { scroll-behavior: auto; }
 }
 
@@ -576,23 +534,7 @@ section[id], header[id] { scroll-margin-top: 70px; }
   margin: 0;
 }
 
-/* -------------------- Admisión: gratuidad + formulario -------------------- */
-.admision-gratuidad {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  background: var(--primario-claro);
-  border-left: 5px solid var(--primario);
-  border-radius: var(--radio);
-  padding: 1.4rem 1.6rem;
-}
-.admision-gratuidad > .bi {
-  font-size: 2.2rem;
-  color: var(--primario-osc);
-  flex-shrink: 0;
-}
-.admision-gratuidad p { color: var(--texto-suave); }
-
+/* -------------------- Admisión: formulario -------------------- */
 .admision-form-wrap {
   background: #fff;
   border-radius: var(--radio);
@@ -661,21 +603,45 @@ section[id], header[id] { scroll-margin-top: 70px; }
   box-shadow: 0 0 0 .2rem rgba(139, 195, 74, 0.2);
 }
 .admision-form .btn-whatsapp { margin-top: .4rem; }
+.admision-form-msg {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin-top: 1.1rem;
+  padding: 1.1rem 1.2rem;
+  background: linear-gradient(135deg, var(--primario), var(--primario-osc));
+  border: none;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.28);
+  animation: msg-pop .45s ease;
+}
+.admision-form-msg > .bi {
+  color: #fff;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+  animation: msg-check .5s ease;
+}
+.admision-form-msg a {
+  color: #fff;
+  font-weight: 800;
+  text-decoration: underline;
+}
+@keyframes msg-pop {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes msg-check {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
 
 /* Ramas de bambú en cualquier sección (mismo estilo que el hero) */
 .has-bamboo { position: relative; overflow: hidden; }
 .has-bamboo .container { position: relative; z-index: 1; }
-
-/* Ramas más grandes SOLO en la sección Sobre Nosotros (abarcan toda la altura) */
-#nosotros .bamboo-deco {
-  width: clamp(280px, 34vw, 560px);
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  object-fit: contain;
-}
-#nosotros .bamboo-deco-tl { top: 0; bottom: 0; right: -6%; }
-#nosotros .bamboo-deco-left { top: 0; bottom: 0; left: -6%; }
 
 /* -------------------- Documentos -------------------- */
 .doc-card {
@@ -725,3 +691,27 @@ section[id], header[id] { scroll-margin-top: 70px; }
 .doc-verde:hover    { border-color: var(--primario); }
 .doc-amarillo:hover { border-color: #F6B400; }
 .doc-azul:hover     { border-color: #2F80C4; }
+
+/* -------------------- Botón volver arriba -------------------- */
+.volver-arriba {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1050;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primario);
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  transition: transform .2s ease, background .2s ease, opacity .3s ease;
+}
+.volver-arriba:hover {
+  background: var(--primario-osc);
+  transform: translateY(-3px);
+}
