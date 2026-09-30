@@ -191,7 +191,7 @@ section[id], header[id] { scroll-margin-top: 70px; }
 /* Fila: panda a la izquierda + botones pegados hacia la imagen (derecha) */
 .hero-actions {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
@@ -201,6 +201,14 @@ section[id], header[id] { scroll-margin-top: 70px; }
   flex: 0 0 auto;
 }
 .hero-actions-btns { flex: 1 1 auto; }
+/* Botones del hero: mismo alto, en una sola línea y alineados */
+.hero-actions-btns .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  white-space: nowrap;
+}
 
 @media (max-width: 991.98px) {
   .hero-title { align-items: center; }
