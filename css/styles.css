@@ -196,7 +196,7 @@ section[id], header[id] { scroll-margin-top: 70px; }
   gap: 1rem;
 }
 .hero-actions-panda {
-  width: clamp(90px, 12vw, 150px);
+  width: clamp(117px, 15.6vw, 195px);
   height: auto;
   flex: 0 0 auto;
 }
