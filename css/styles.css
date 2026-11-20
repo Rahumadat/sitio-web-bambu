@@ -734,3 +734,59 @@ section[id], header[id] { scroll-margin-top: 70px; }
   background: var(--primario-osc);
   transform: translateY(-3px);
 }
+
+/* ==========================================================================
+   Ajustes de legibilidad para celulares y tablet
+   Anchos de referencia: 360, 375, 390, 393, 412, 430 (celulares) y 768 (tablet)
+   ========================================================================== */
+
+/* Etiqueta de edad: si el texto ocupa dos líneas, no se deforma como píldora */
+.nivel-edad {
+  border-radius: 14px;
+  line-height: 1.35;
+  max-width: calc(100% - 2rem);
+}
+
+/* Celulares grandes y tablet pequeña (hasta 767px): texto alineado a la izquierda
+   y panda más chico para que el título de cada tarjeta no se corte */
+@media (max-width: 767.98px) {
+  .mv-card p,
+  .value-card p { text-align: left; }
+  .mv-icon-img { width: 200px; height: 200px; }
+}
+
+/* Celulares (hasta 575px) */
+@media (max-width: 575.98px) {
+  /* Misión / Visión / Enfoque: panda arriba, título centrado debajo, más ancho útil para el texto */
+  .mv-card { padding: 1.6rem 1.25rem 1.8rem; }
+  .mv-head { flex-direction: column; gap: .3rem; margin-bottom: .9rem; }
+  .mv-icon-img { width: 150px; height: 150px; }
+  .mv-title { font-size: 1.5rem; text-align: center; }
+  .mv-card p { font-size: 1rem; line-height: 1.65; }
+
+  /* Tarjetas de "Nosotros" (ahora en una columna) */
+  .value-card { padding: 1.4rem 1.25rem 1.6rem; }
+  .value-card p { font-size: 1rem; line-height: 1.65; }
+
+  /* Jornadas apiladas: deja espacio para que el panda central no tape los títulos */
+  .jornada-manana { padding-bottom: 3.6rem; }
+  .jornada-tarde { padding-top: 3.6rem; }
+
+  /* Etiquetas de contacto un poco más compactas */
+  .contacto-item { padding: 1rem 1.1rem; gap: .85rem; }
+}
+
+/* Panda animado del inicio en celular y tablet vertical (hero apilado):
+   el video es 16:9 y deja ver un recuadro más claro alrededor del círculo.
+   Se recorta a un cuadrado centrado, se limita al círculo del panda y se agranda. */
+@media (max-width: 991.98px) {
+  .hero-actions { gap: .6rem; }
+  .hero-actions-panda {
+    width: clamp(128px, 38vw, 176px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    clip-path: circle(45% at 50% 50%);
+  }
+}
