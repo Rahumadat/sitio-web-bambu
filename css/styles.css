@@ -381,6 +381,13 @@ section[id], header[id] { scroll-margin-top: 70px; }
 .contacto-item > .bi { font-size: 1.6rem; color: var(--primario); flex-shrink: 0; }
 .contacto-item p { color: var(--texto-suave); font-size: .95rem; }
 .contacto-item-wa > .bi { color: var(--whatsapp); }
+/* Botones "Cómo llegar" (Waze y Google Maps) debajo de la dirección */
+.contacto-rutas { display: flex; flex-wrap: wrap; gap: .75rem; }
+.contacto-rutas .btn {
+  flex: 1 1 200px;
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+  padding: .65rem 1rem; font-size: .95rem; white-space: nowrap;
+}
 .mapa-wrapper {
   height: 100%; min-height: 340px; border-radius: var(--radio);
   overflow: hidden; box-shadow: var(--sombra);
